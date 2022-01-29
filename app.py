@@ -5,7 +5,7 @@ Created on Fri Jan 28 21:10:13 2022
 @author: Usuario
 """
 import flask
-from flask import request
+from flask import request,render_template
 
 app=flask.Flask(__name__)
 
@@ -26,6 +26,6 @@ def home():
             video = result
     
     video_url = result['formats'][0]['url']
-    import webbrowser
-    webbrowser.open(video_url) 
-    return video_url
+
+ 
+    return render_template(video_url)
