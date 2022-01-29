@@ -11,4 +11,5 @@ app=flask.Flask(__name__)
 
 @app.route('/',methods=['GET'])
 def home():
-    return 'Hello word'
+    videoid=request.args['VideoID']
+    return videoid
