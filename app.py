@@ -26,5 +26,6 @@ def home():
             video = result
     
     video_url = result['formats'][0]['url']
-
+    import webbrowser
+    webbrowser.open(video_url) 
     return video_url
