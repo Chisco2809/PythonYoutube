@@ -5,7 +5,7 @@ Created on Fri Jan 28 21:10:13 2022
 @author: Usuario
 """
 import flask
-from flask import request,render_template
+from flask import request,redirect
 
 app=flask.Flask(__name__)
 
@@ -28,4 +28,4 @@ def home():
     video_url = result['formats'][0]['url']
 
  
-    return render_template(video_url)
+    return redirect(video_url)
