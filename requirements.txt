@@ -2,3 +2,4 @@ flask
 pandas
 gunicorn
 youtube_dl
+requests
