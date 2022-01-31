@@ -6,6 +6,7 @@ Created on Fri Jan 28 21:10:13 2022
 """
 import flask
 from flask import request,redirect
+import webbrowser
 
 app=flask.Flask(__name__)
 
@@ -13,4 +14,4 @@ app=flask.Flask(__name__)
 import youtube_dl
 @app.route('/',methods=['GET'])
 def home():
-    return redirect("http://www.example.com", code=302)
+    webbrowser.open_new('https://www.youtube.com/watch?v=GjVa2o8-WnI&ab_channel=Music26Online')
