@@ -14,4 +14,6 @@ app=flask.Flask(__name__)
 import youtube_dl
 @app.route('/',methods=['GET'])
 def home():
-    return redirect('https://www.youtube.com/watch?v=GjVa2o8-WnI&ab_channel=Music26Online')
+    r = requests.get("http://unoredradio.com:9768/;stream.mp3_", stream=True)
+    return Response(r.iter_content(chunk_size=1024))
+
