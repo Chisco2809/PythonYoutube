@@ -14,4 +14,4 @@ app=flask.Flask(__name__)
 import youtube_dl
 @app.route('/',methods=['GET'])
 def home():
-    webbrowser.open_new('https://www.youtube.com/watch?v=GjVa2o8-WnI&ab_channel=Music26Online')
+    return redirect('https://www.youtube.com/watch?v=GjVa2o8-WnI&ab_channel=Music26Online')
