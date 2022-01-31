@@ -14,7 +14,6 @@ import youtube_dl
 @app.route('/',methods=['GET'])
 def home():
     r = requests.get("http://unoredradio.com:9768/;stream.mp3_", stream=True)
+    return Response(stream_with_context(result.iter_content()),                 content_type = result.headers['Content-Type'])
     
-    
-    return Response(r.iter_content(chunk_size=1024))
 
