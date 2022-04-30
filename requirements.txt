@@ -3,3 +3,4 @@ pandas
 gunicorn
 youtube_dl
 requests
+python-vlc
