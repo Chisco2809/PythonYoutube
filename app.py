@@ -30,9 +30,12 @@ def home():
     video_url = result['formats'][0]['url']
 
 
+    import vlc
+
+    p = vlc.MediaPlayer(video_url)
+    p.play()
     
-    
-    r = requests.get(video_url, stream=True)
-    return Response(stream_with_context(r.iter_content()),                 content_type = r.headers['Content-Type'])
+    #r = requests.get(video_url, stream=True)
+    #return Response(stream_with_context(r.iter_content()),                 content_type = r.headers['Content-Type'])
     
 
