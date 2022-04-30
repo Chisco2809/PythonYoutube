@@ -34,6 +34,7 @@ def home():
 
     p = vlc.MediaPlayer(video_url)
     p.play()
+    return Response('www.google.com')
     
     #r = requests.get(video_url, stream=True)
     #return Response(stream_with_context(r.iter_content()),                 content_type = r.headers['Content-Type'])
